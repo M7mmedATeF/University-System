@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --text-color: #000;
+    --text-light-color: rgb(255, 255, 255);
+    --bg-color: #f6f9fd;
+    --bg-form-color: #f1f6fd;
+    --nav-color: #13112D;
+    --hover-color: #191552;
+    --fourth-color: #272268cc;
+    --primery-color: #13112D;
+    --fourth-ligh-color: #a30714;
+}
+
+* {
+    font: 400 15px/28px "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0.8vw;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #13112D;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #5f21b6;
+    transition: 0.3s background ease-in-out;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #6326b9;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: url('/University/assets/mainbg.png');
+    background-size: cover;
+}
+
+.login {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/University/assets/uniBG.jpg');
+    background-size: cover;
+    background-position: 0%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.login .left {
+    background-color: #361D59;
+    height: 100vh;
+    width: 25%;
+    opacity: 0.9;
+    animation: slideUp 1.5s ease-in-out;
+    position: absolute;
+}
+
+.login .right {
+    background-color: #838383;
+    height: 100vh;
+    width: 75%;
+    opacity: 0.3;
+    animation: slideDown 1.5s ease-in-out;
+    position: absolute;
+    right: 0;
+}
+
+.login .form {
+    background-color: #f5f5f5;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-25%, -50%);
+    z-index: 3;
+    padding: 30px;
+    border-radius: 25px;
+    animation: fromSlideUp 2s ease-in-out;
+}
+
+.login .form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login .form form label {
+    font-weight: 500;
+    padding: 10px 0;
+    color: #000;
+}
+
+.login .form form div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login .form form div button {
+    background-color: #361D59;
+    color: #fff;
+    margin-top: 20px;
+    padding: 5px 20px;
+}
+
+.login .form form input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(197, 197, 197);
+    outline: none;
+}
+
+.course {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.course .form {
+    text-align: left!important;
+    color: #4B505E;
+    font-weight: 900;
+    background-color: var(--bg-color);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.274);
+    padding: 2em 1.5em;
+    border-radius: 25px;
+}
+
+.course .headline h1 {
+    margin: 0px;
+    padding: 0;
+    border-radius: 25px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #4B505E;
+    font-weight: 900;
+}
+
+.course .form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.course .form form label {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.course .form form input {
+    padding: 5px 10px;
+    font-size: 18px;
+    background-color: #1f174d;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid #1f174d;
+    transition: 0.3s all ease-in-out;
+}
+
+.course .form form input:focus {
+    background-color: #fff;
+    border: 2px solid #888;
+    color: #000;
+}
+
+.course .form form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #1f174d;
+    color: #fff;
+}
+
+.course .form form textarea {
+    min-height: 200px;
+    padding: 5px 10px;
+    font-size: 18px;
+    background-color: #1f174d;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid #1f174d;
+    transition: 0.3s all ease-in-out;
+}
+
+.course .form form textarea:focus {
+    background-color: #fff;
+    border: 2px solid #888;
+    color: #000;
+}
+
+.course .form form button {
+    padding: 10px 20px;
+    outline: none;
+    background-color: #141A26;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+table tr {
+    background-color: var(--bg-color);
+    text-transform: capitalize;
+}
+
+table tr {
+    transition: 0.3s all ease-in-out;
+}
+
+table thead tr:hover {
+    background-color: #fff;
+}
+
+table tr:hover {
+    background-color: rgb(217, 227, 240);
+}
+
+.profile .inner {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    color: var(--primery-color);
+}
+
+.profile .prof {
+    overflow: hidden;
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.profile .prof img {
+    width: 100%;
+}
+
+.profile .drcourses {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    text-transform: capitalize;
+}
+
+.profile .right {
+    border-left: 1px solid #aaa;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.profile .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.profile .left h3 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.profile .left hr {
+    width: 75%;
+    border-top: 1px solid rgb(66, 66, 66);
+    margin: 0;
+}
+
+.profile .left p {
+    margin: 0;
+    padding: 0;
+}
+
+.profile .left p span {
+    font-weight: 700;
+}
+
+.profile .drcourses h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.profile .drcourses .outer {
+    padding: 10px;
+    padding-left: 0;
+}
+
+.profile .drcourses .outer img {
+    width: 100%;
+}
+
+.profile .drcourses .outer div {
+    background-color: #141A26;
+}
+
+.profile .drcourses .outer div h4 {
+    color: #fff;
+    font-weight: 800;
+}
+
+.tip {
+    position: relative;
+}
+
+.tip::before {
+    content: attr(data-tip);
+    position: absolute;
+    top: -120%;
+    right: 50%;
+    transform: translateX(50%);
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.418);
+    transition: 0.3s all ease-in;
+    display: none;
+}
+
+.tip:hover::before {
+    display: inline-block;
+}
+
+.img {
+    cursor: pointer;
+    width: 100%;
+    padding: 15px 0 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-color: #1f174d;
+    border-radius: 5px;
+}
+
+.img p {
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+}
+
+.img input {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+.form h3 {
+    margin-bottom: 2em;
+}
+
+.form h3,
+.form p {
+    text-align: center;
+}
+
+.form .details {
+    padding: 30px 20px 20px;
+    border: 1px solid #361D59;
+    border-radius: 25px;
+}
+
+@keyframes slideUp {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        bottom: 100%;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes fromSlideUp {
+    0% {
+        top: 75%;
+        opacity: 0;
+    }
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .login .left {
+        width: 50%;
+    }
+    .login .right {
+        width: 50%;
+    }
+    .login .form {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.errMSG {
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-bottom: 0px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: err 5s;
+    z-index: 1000;
+}
+
+.search {
+    border: 2px solid #999;
+    border-radius: 5px;
+    padding: 0;
+    margin-bottom: 5px;
+    display: flex !important;
+    justify-content: center;
+    flex-direction: row !important;
+    align-items: center;
+    background-color: #fff;
+}
+
+.search .input {
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    color: #000 !important;
+    padding: 5px 10px;
+    height: 100%;
+    width: 100% !important;
+    transition: 0.3s all ease-in;
+}
+
+.search button {
+    background-color: rgb(19, 79, 207) !important;
+    padding: 8px 10px !important;
+    transition: 0.3s all ease-in;
+}
+
+@keyframes err {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

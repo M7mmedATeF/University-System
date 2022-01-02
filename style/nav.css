@@ -1,0 +1,123 @@
+nav {
+    background-color: var(--nav-color);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    color: var(--text-light-color);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.537);
+}
+
+nav h1 {
+    font-weight: 900;
+}
+
+nav h1 i {
+    font-size: 0.9em;
+    margin-right: 5px;
+}
+
+nav ul {
+    padding-top: 10px;
+}
+
+nav ul,
+nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+nav ul li {
+    margin-right: 20px;
+    transition: 0.3s all ease-in-out;
+}
+
+nav ul li a {
+    color: #fff;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.3s all ease-in-out;
+}
+
+nav ul li:hover ul {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    color: var(--primery-color);
+}
+
+nav ul li ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 170%;
+    width: 200px;
+    padding: 0px;
+    z-index: 99;
+}
+
+nav ul li ul a,
+nav ul li ul button {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    width: 200px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    z-index: 100;
+    transition: 0.3s all ease-in;
+    cursor: pointer;
+    text-align: left;
+    border: none;
+    outline: none;
+}
+
+nav ul li ul a:hover,
+nav ul li ul button:hover {
+    text-decoration: none;
+    padding-left: 35px;
+    color: #000;
+}
+
+nav .connected {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav .connected div {
+    padding-top: 10px;
+}
+
+nav .connected div span {
+    background-color: var(--fourth-color);
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+nav .connected img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+nav .connected .logout {
+    background-color: #C20B00;
+    color: #fff;
+}
